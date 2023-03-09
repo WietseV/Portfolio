@@ -106,7 +106,7 @@ export default function LandingPage() {
                     className={`font-audiowide text-primary__gray text-5xl md:text-6xl max-w-fit min-h-[96px] md:min-h-fit text-clip`}>Wietse Vandeput</h1>
                     <h2 id='title' className={`font-sulphur text-primary__pink text-2xl md:text-4xl min-h-[40px] z-10`}>Problem Solver</h2>
                     <a id="projectLink" className="w-36 h-11 z-10 flex justify-center items-center mt-4"
-                    href="https://github.com/WietseV/porfolio">
+                    href="https://github.com/WietseV/Portfolio">
                         <h3 className="font-sulphur text-sm">&lt;Source Code&gt;</h3>
                     </a>
                 </div>
