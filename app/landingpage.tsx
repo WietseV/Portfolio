@@ -98,6 +98,7 @@ export default function LandingPage() {
     
 
     return ( 
+        // Landingpage
         <section id='landingPage' className="h-screen bg-points bg-primary__white overflow-hidden snap-always snap-start relative ">
             <div className='z-10'>
                 <div className="max-w-[80%] md:max-w-6xl mx-auto flex flex-col justify-center md:ml-32 xl:ml-72 mt-32 md:mt-48 xl:mt-72 mb-32 overflow-hidden  z-10">

@@ -92,6 +92,7 @@ export default function Work() {
     }
 
     return (
+        //Work section
         <section id="work" className=" bg-points w-screen min-h-screen snap-always snap-start bg-primary__white relative overflow-hidden lg:grid lg:place-items-center">
             {/* Smaller screens get a swipable gallery of the projects */}
             <div className="block lg:hidden">

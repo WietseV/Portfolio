@@ -41,6 +41,7 @@ export default function Contact() {
     }
 
     return (
+        // Contact section
         <section id="contact" className="min-h-screen bg-primary__gray snap-always snap-start relative">
             <div className="md:max-w-[80%] xl:max-w-6xl w-full mx-auto flex flex-col md:flex-row md:justify-between pt-16">
                 <h2 className="md:hidden text-primary__white font-sulphur text-2xl px-4 text-right">Contact<span className="pl-2 text-primary__pink">Me</span></h2>

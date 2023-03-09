@@ -22,6 +22,7 @@ export default function About() {
     
 
     return (
+        // About section
         <section className="h-screen bg-primary__gray snap-always snap-start relative overflow-hidden" id="about">
             <a href="./CV_Wietse_Vandeput.pdf" target="_blank" rel="noopener noreferrer" className="font-audiowide text-2xl text-primary__white z-30 absolute right-4 bottom-4">Resume</a>
             <div id="skills" className="h-screen w-full grid place-items-center font-sulphur text-primary__white text-xl overflow-hidden absolute bg-primary__gray z-20">
