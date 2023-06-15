@@ -80,6 +80,9 @@ export default function LandingPage() {
                         if (index < iterations) {
                             return ((event as HTMLElement).dataset.value as string)[index]
                         } 
+                        if (letter=== ' '){
+                            return ' ';
+                        }
                         return letters[Math.floor(Math.random() * 36)]
                     })
                     .join('');
