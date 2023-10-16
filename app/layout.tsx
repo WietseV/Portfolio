@@ -32,6 +32,7 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
         <meta name="keywords" content="UI, UX, ui/ux, UI/UX, designer, web developer, fullstack, fullstack developer, software developer, portfolio, wietse vandeput, 
         wietse, vandeput, diverko, problem solver"/>
         <meta name="author" content="Wietse Vandeput"/>
+        <meta name="google-site-verification" content="MjLmbtfMaWnRNEEIyYhwE4I5nrK2v7ka9hq0tPNimd8" />
       </Head>
       <body>
         {children}
