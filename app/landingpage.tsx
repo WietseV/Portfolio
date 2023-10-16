@@ -42,8 +42,8 @@ if (typeof window === 'object'){
 
         let pointer = document.getElementById('pointer')
         if (pointer !== null){
-            (pointer as HTMLElement).style.opacity = '0.8';
-            (pointer as HTMLElement).animate({
+            (pointer).style.opacity = '0.8';
+            (pointer).animate({
                 left: `${x - 48}px`,
                 top: `${y - 48}px`
             }, { duration: 2500, fill: 'forwards'})
@@ -56,9 +56,9 @@ if (typeof window === 'object'){
 
         let pointer = document.getElementById('pointer')
         if (pointer !== null){
-            (pointer as HTMLElement).style.left = (x - 48)+"px";
-            (pointer as HTMLElement).style.top = (y - 48)+"px";
-            (pointer as HTMLElement).style.opacity = '0.8';
+            (pointer).style.left = (x - 48)+"px";
+            (pointer).style.top = (y - 48)+"px";
+            (pointer).style.opacity = '0.8';
         }
         
     })
@@ -106,9 +106,9 @@ export default function LandingPage() {
             <div className='z-10'>
                 <div className="max-w-[80%] md:max-w-6xl mx-auto flex flex-col justify-center md:ml-32 xl:ml-72 mt-32 md:mt-48 xl:mt-72 mb-32 overflow-hidden  z-10">
                     <h2 className="font-sulphur text-primary__pink text-lg md:text-2xl z-10">Hi, my name is</h2>
-                    <h1 onPointerDown={() => hackerText()} onPointerOver={() => hackerText()} data-value='Wietse Vandeput' 
+                    <h1 onPointerDown={() => hackerText()} onPointerOver={() => hackerText()} data-value='Wietse Vandeput' aria-label='Wietse Vandeput'
                     className={`font-audiowide text-primary__gray text-5xl md:text-6xl max-w-fit min-h-[96px] md:min-h-fit text-clip`}>Wietse Vandeput</h1>
-                    <h2 id='title' className={`font-sulphur text-primary__pink text-2xl md:text-4xl min-h-[40px] z-10`}>Problem Solver</h2>
+                    <h2 id='title' className={`font-sulphur text-primary__pink text-2xl md:text-4xl min-h-[40px] z-10`} aria-label='Problem Solver'>Problem Solver</h2>
                     <a id="projectLink" className="w-36 h-11 z-10 flex justify-center items-center mt-4"
                     href="https://github.com/WietseV/Portfolio" target="_blank" rel="noreferrer noopener">
                         <h3 className="font-sulphur text-sm">&lt;Source Code&gt;</h3>

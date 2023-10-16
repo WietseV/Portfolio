@@ -9,25 +9,23 @@ import { AiOutlineSwapRight, AiOutlineSwapLeft } from 'react-icons/ai'
 
 export default function Work() {
 
-    var stack: HTMLElement | null;
-    var project: HTMLElement | null;
-    var screenWidth: number;
-    var index = 0;
+    let stack: HTMLElement | null;
+    let project: HTMLElement | null;
+    let screenWidth: number;
+    let index = 0;
     const maxProjects = 3;
-    var down = 0
+    let down = 0
 
     if (typeof window === 'object'){
         stack = document.getElementById('stack');
-        project = document.getElementById('project');
         if ( maxProjects > 3){
             document.getElementById('grid')!.style.gridTemplateRows = "repeat(2, minmax(0, 1fr))";
         }
         if ( maxProjects <= 3){
             document.getElementById('grid')!.style.height = "75%";
         }
-        screenWidth = window.innerWidth;
         const first = stack!.firstChild as HTMLElement;
-        first!.animate({
+        first.animate({
             transform: 'translate(-100%)',
         }, { duration: 10, fill: "forwards" });
 
@@ -60,9 +58,9 @@ export default function Work() {
     }
     
     function right(){
-        var oldindex = index;
+        let oldindex = index;
         index += 1;
-        var children = stack?.children;
+        let children = stack?.children;
         if (index >= maxProjects ){
             index = maxProjects - 1;
         };
@@ -75,9 +73,9 @@ export default function Work() {
         
     }
     function left(){
-        var oldindex = index;
+        let oldindex = index;
         index -= 1;
-        var children = stack?.children;
+        let children = stack?.children;
         if (index <= -1 ){
             index = 0;
         }
