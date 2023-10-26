@@ -2,21 +2,27 @@
 
 export default function About() {
 
-    const api = "API's "
-
     if (typeof window === 'object'){
         const skills = document.getElementById('skills');
         const move = document.getElementById('move');
         const about = document.getElementById('about')
-        skills!.style.width = `80%`
-        move!.style.left = `${0.8 * window.innerWidth - 52}px`
-        const handleOnMove = (e: { clientX: any; }) =>{
-        const positionPercentage = e.clientX / window.innerWidth * 100;
-        skills!.style.width = `${positionPercentage}%`;
-        move!.style.left = `${(positionPercentage / 100) * window.innerWidth - 52}px`
-        };
-        about!.onpointermove = e => handleOnMove(e);
-        about!.ontouchmove = e => handleOnMove(e.touches[0]);
+        const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`).matches;
+
+        if (!isReduced) {
+            skills!.style.width = `80%`
+            // skills!.style.transition = "700ms linear"
+            move!.style.left = `${0.8 * window.innerWidth - 52}px`
+            const handleOnMove = (e: { clientX: any; }) => {
+                const positionPercentage = e.clientX / window.innerWidth * 100;
+                skills!.style.width = `${positionPercentage}%`;
+                move!.style.left = `${(positionPercentage / 100) * window.innerWidth - 52}px`
+            };
+            about!.onpointermove = e => handleOnMove(e);
+            about!.ontouchmove = e => handleOnMove(e.touches[0]);
+        } else {
+            move!.style.visibility = 'hidden'
+            move!.style.left = `${0.8 * window.innerWidth - 52}px`
+        }
     }
     
     
@@ -25,7 +31,7 @@ export default function About() {
         // About section
         <section className="h-screen bg-primary__gray snap-always snap-start relative overflow-hidden" id="about">
             <a href="./CV_Wietse_Vandeput.pdf" target="_blank" rel="noopener noreferrer" className="font-audiowide text-2xl text-primary__white z-30 absolute right-4 bottom-4">Resume</a>
-            <div id="skills" className="h-screen w-full grid place-items-center font-sulphur text-primary__white text-xl overflow-hidden absolute bg-primary__gray z-20">
+            <div id="skills" className="h-screen w-0 grid place-items-center font-sulphur text-primary__white text-xl overflow-hidden absolute bg-primary__gray z-20">
                 <div className="mx-[15vw] w-[70vw]">
                     <h1 className="text-3xl pb-4">ABOUT ME</h1>
                     <p>
@@ -54,7 +60,7 @@ export default function About() {
                                 <h2 className="text-2xl text-primary__gray mt-4">Other</h2>
                                 <li>UI/UX - Figma</li>
                                 <li>Git & Github</li>
-                                <li>{api + " (Firebase, Emailjs, SMTPjs,...)"}</li>
+                                <li>Api&apos;s (Firebase, Emailjs, SMTPjs,...)</li>
                                 <li>And more...</li>
                             </ul>
                         </div>

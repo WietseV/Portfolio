@@ -3,14 +3,14 @@ import Image from "next/image"
 export default function Project(props: {title: string, photo: any, description: string, tags: (string)[], link: string, code: string }) {
 
     return (
-        <div id="projectCard" className="w-full min-h-[316px] h-[90%] my-auto px-2 md:px-4 py-2 relative text-primary__gray">
+        <div id="projectCard" className="w-full min-h-[316px] h-[90%] my-auto px-2 md:px-4 py-2 relative text-primary__gray" tabIndex={0}>
             <div id="cardBackground" className="bg-primary__gray bg-opacity-30 absolute inset-2 h-full z-0 border-0 border-primary__pink shadow-xl"/>
-            <div id="cardBackground" className="hidden bg-lines motion-reduce:animate-scroll absolute inset-2 h-full z-0"/>
+            <div id="cardBackground" className="hidden bg-lines motion-safe::animate-scroll absolute inset-2 h-full z-0"/>
             <div className="font-sulphur h-full flex flex-col justify-center items-center p-4 z-10 gap-4">
                 <h1 className="text-3xl font-audiowide pb-4 z-10">{props.title}</h1>
                 <a href={props.link}
                 target="_blank" rel="noreferrer noopener"
-                className="w-[80%] mx-auto bg-center bg-cover relative mb-4 sepia hover:sepia-0 hover:w-[85%]">
+                className="w-[80%] mx-auto bg-center bg-cover relative mb-4 sepia motion-safe:hover:sepia-0 motion-safe:hover:w-[85%]">
                     <Image
                     alt={props.title}
                     src={props.photo}>

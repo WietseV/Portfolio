@@ -16,8 +16,8 @@ li {
 
 #projectLink {
     @apply px-4 py-2 text-primary__gray border-2 border-primary__gray relative z-10 before:bg-projectButtons before:bg-left-top 
-    before:absolute before:inset-0 before:w-full hover:before:bg-right-bottom before:transition-[background-position] 
-    before:duration-200 before:ease-linear hover:text-primary__pink before:z-[-1] transition-[color] duration-100 ease-linear
+    before:absolute before:inset-0 before:w-full motion-safe:hover:before:bg-right-bottom before:transition-[background-position]
+    before:duration-200 before:ease-linear motion-safe:hover:text-primary__pink before:z-[-1] transition-[color] duration-100 ease-linear
     text-base
 }
 
@@ -26,19 +26,24 @@ li {
 }
 
 #projectCard:hover #toggle {
-    @apply flex
+    @apply motion-safe:flex
+}
+
+
+#projectCard:click #toggle {
+    @apply motion-safe:flex
 }
 
 #projectCard:hover #tag {
-    @apply hidden
+    @apply motion-safe:hidden
 }
 
 #projectCard:hover{
-    @apply min-h-[440px] py-4
+    @apply motion-safe:min-h-[440px] motion-safe:py-4
 }
 
 #projectCard:hover #cardBackground {
-    @apply inline border-[2px] bg-primary__pink bg-opacity-30
+    @apply motion-safe:inline motion-safe:border-[2px] motion-safe:bg-primary__pink motion-safe:bg-opacity-30
 }
 
 .slidebutton {

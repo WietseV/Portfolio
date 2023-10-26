@@ -47,14 +47,14 @@ export default function Contact() {
                 <h2 className="md:hidden text-primary__white font-sulphur text-2xl px-4 text-right">Contact<span className="pl-2 text-primary__pink">Me</span></h2>
                 <form id='form' onSubmit={(e) => Send(e)} className="flex flex-col gap-2 xl:w-[75%] pt-8 md:pt-16 px-4 font-sulphur">
                     <div className="flex gap-2">
-                        <input id="name" type="text" placeholder="Name" className="px-4 py-2 rounded-tl-lg w-[50%] bg-primary__white bg-opacity-80 hover:bg-opacity-90 focus:bg-opacity-90
+                        <input id="name" type="text" placeholder="Name" className="px-4 py-2 rounded-tl-lg w-[50%] bg-primary__white bg-opacity-80 motion-safe:hover:bg-opacity-90 focus:bg-opacity-90
                          outline-none placeholder:text-primary__gray" required />
-                        <input id="email" type="email" placeholder="Email" className="px-4 py-2 rounded-tr-lg w-[50%] bg-primary__white bg-opacity-80 hover:bg-opacity-90 focus:bg-opacity-90
+                        <input id="email" type="email" placeholder="Email" className="px-4 py-2 rounded-tr-lg w-[50%] bg-primary__white bg-opacity-80 motion-safe:hover:bg-opacity-90 focus:bg-opacity-90
                          outline-none placeholder:text-primary__gray" required/>
                     </div>
-                    <input id="subject" type="text" placeholder="Subject" className="px-4 py-2 bg-primary__white bg-opacity-80 hover:bg-opacity-90 focus:bg-opacity-90
+                    <input id="subject" type="text" placeholder="Subject" className="px-4 py-2 bg-primary__white bg-opacity-80 motion-safe:hover:bg-opacity-90 focus:bg-opacity-90
                          outline-none placeholder:text-primary__gray" required/>
-                    <textarea id="message" placeholder="Message" className="min-h-[160px] px-4 py-2 rounded-b-lg bg-primary__white bg-opacity-80 hover:bg-opacity-90 focus:bg-opacity-90
+                    <textarea id="message" placeholder="Message" className="min-h-[160px] px-4 py-2 rounded-b-lg bg-primary__white bg-opacity-80 motion-safe:hover:bg-opacity-90 focus:bg-opacity-90
                          outline-none placeholder:text-primary__gray" required/>
                     <div>
                         {result === '' && <h1></h1> || result === 'OK' && <h1 className='text-green-300'>The mail was succesfully send, I`ll be in touch soon.</h1> 
@@ -63,21 +63,21 @@ export default function Contact() {
                     <div className="w-full flex jusitfy-between">
                         <button type="submit" 
                         className="px-4 py-2 border-2 border-primary__white bg-opacity-80 text-primary__white relative z-10 rounded-md before:bg-buttons before:bg-left-top 
-                        before:absolute before:inset-0 before:w-full hover:before:bg-right-bottom before:transition-[background-position] 
-                        before:duration-200 before:ease-linear hover:text-[#1E1E1E] before:z-[-1] transition-[color] duration-100 ease-linear">
+                        before:absolute before:inset-0 before:w-full motion-safe:hover:before:bg-right-bottom before:transition-[background-position]
+                        before:duration-200 before:ease-linear motion-safe:hover:text-[#1E1E1E] before:z-[-1] transition-[color] duration-100 ease-linear">
                             Send
                         </button>
                         <div className='w-full flex text-primary__white text-4xl gap-2 justify-end items-end'>
                             <a href='https://github.com/WietseV' 
-                            target="_blank" rel="noreferrer noopener" className='hover:-translate-y-1 transition-all duration-75 ease-in'>
+                            target="_blank" rel="noreferrer noopener" className='motion-safe:hover:-translate-y-1 transition-all duration-75 ease-in'>
                                 <AiOutlineGithub />
                             </a>
                             <a href='https://www.linkedin.com/in/wietse-vandeput-99ab87159/' 
-                            target="_blank" rel="noreferrer noopener" className='motion-reduce:hover:-translate-y-1 motion-reduce:duration-75 ease-in'>
+                            target="_blank" rel="noreferrer noopener" className='motion-safe:hover:-translate-y-1 duration-75 ease-in'>
                                 <AiFillLinkedin />
                             </a>
                             <a href="mailto:wietse.vandeput@hotmail.com"
-                            className='hover:-translate-y-1 transition-all duration-75 ease-in'>
+                            className='motion-safe:hover:-translate-y-1 transition-all duration-75 ease-in'>
                                 <AiOutlineMail />
                             </a>
                         </div>

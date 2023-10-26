@@ -39,7 +39,6 @@ if (typeof window === 'object'){
 
 
     //animate cursor background
-
         window.addEventListener('pointermove', e => {
             let x = e.clientX
             let y = e.clientY
@@ -67,8 +66,6 @@ if (typeof window === 'object'){
 
         })
     }
-
-
 }
 
 export default function LandingPage() {
@@ -119,7 +116,7 @@ export default function LandingPage() {
                     <h2 className="font-sulphur text-primary__pink text-lg md:text-2xl z-10">Hi, my name is</h2>
                     <h1 onPointerDown={() => hackerText()} onPointerOver={() => hackerText()} data-value='Wietse Vandeput' aria-label='Wietse Vandeput'
                     className={`font-audiowide text-primary__gray text-5xl md:text-6xl max-w-fit min-h-[96px] md:min-h-fit text-clip`}>Wietse Vandeput</h1>
-                    <h2 id='title' className={`font-sulphur text-primary__pink text-2xl md:text-4xl min-h-[40px] z-10`} aria-label='Problem Solver, Web Developer, UI/UX Designer, Full-Stack Developer'>{window.matchMedia(`(prefers-reduced-motion: reduce)`).matches ? "Problem Solver, Web Developer, UI/UX Designer & Full-Stack Developer ": "Problem Solver"}</h2>
+                    <h2 id='title' className={`font-sulphur text-primary__pink text-2xl md:text-4xl min-h-[40px] z-10`} aria-label='Problem Solver, Web Developer, UI/UX Designer, Full-Stack Developer'>Problem Solver</h2>
                     <a id="projectLink" className="w-36 h-11 z-10 flex justify-center items-center mt-4"
                     href="https://github.com/WietseV/Portfolio" target="_blank" rel="noreferrer noopener">
                         <h3 className="font-sulphur text-sm">&lt;Source Code&gt;</h3>
@@ -128,7 +125,7 @@ export default function LandingPage() {
                 <a className="w-40 h-16 bg-primary__gray
                 flex flex-col justify-center items-center
                 absolute bottom-16 md:bottom-8 left-[50%] -translate-x-[90px] -translate-y-[10px]
-                 text-primary__white z-10 transition-all duration-75 hover:-translate-x-[80px] hover:-translate-y-[0px]"
+                 text-primary__white z-10 transition-all duration-75 motion-safe:hover:-translate-x-[80px] motion-safe:hover:-translate-y-[0px]"
                 href="/#about">
                     <h3 className=" pb-2 font-sulphur">EXPLORE</h3>
                 </a>
@@ -138,12 +135,12 @@ export default function LandingPage() {
             </div>
             <div className='z-0'>
                 <div className="relative top-[50%] z-[1]">
-                    <div className="w-[850px] h-[90px] bg-primary__gray bg-opacity-90 motion-reduce:animate-slideBig mb-4"/>
-                    <div className="w-[440px] h-[0px] motion-reduce:animate-slideSmall border-b-[55px] border-b-primary__gray
+                    <div className="w-[850px] h-[90px] bg-primary__gray bg-opacity-90 motion-safe:animate-slideBig mb-4"/>
+                    <div className="w-[440px] h-[0px] motion-safe::animate-slideSmall border-b-[55px] border-b-primary__gray
                     border-opacity-80 border-l-transparent border-r-transparent border-solid border-r-[30px]
                     border-l-[30px]"/>
                 </div>
-                <div id='pointer' className='opacity-0 absolute rounded-full w-48 h-48 beautiful motion-reduce:animate-rotate blur-[160px] z-0'/>
+                <div id='pointer' className='opacity-0 absolute rounded-full w-48 h-48 beautiful motion-safe:animate-rotate blur-[160px] z-0'/>
             </div>
            
         </section>
