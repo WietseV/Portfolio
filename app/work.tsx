@@ -16,7 +16,12 @@ export default function Work() {
     const maxProjects = 3;
     let down = 0
 
+
+
     if (typeof window === 'object'){
+
+        const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`).matches;
+
         stack = document.getElementById('stack');
         if ( maxProjects > 3){
             document.getElementById('grid')!.style.gridTemplateRows = "repeat(2, minmax(0, 1fr))";
@@ -25,9 +30,11 @@ export default function Work() {
             document.getElementById('grid')!.style.height = "75%";
         }
         const first = stack!.firstChild as HTMLElement;
-        first.animate({
-            transform: 'translate(-100%)',
-        }, { duration: 10, fill: "forwards" });
+        if (!isReduced){
+            first.animate({
+                transform: 'translate(-100%)',
+            }, { duration: 10, fill: "forwards" });
+        }
 
         //mouse swipe
         const work = document.getElementById('work')

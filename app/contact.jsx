@@ -4,7 +4,7 @@ import { AiOutlineGithub, AiFillLinkedin, AiOutlineMail, AiOutlineCopyright } fr
 import { useState } from 'react'
 
 /* SmtpJS.com - v3.0.0 */
-var Email = { send: function (a) { 
+var Email = { send: function (a) {
     return new Promise(function (n, e) { 
         a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send";
         var t = JSON.stringify(a); Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) { n(e) }) 
@@ -73,7 +73,7 @@ export default function Contact() {
                                 <AiOutlineGithub />
                             </a>
                             <a href='https://www.linkedin.com/in/wietse-vandeput-99ab87159/' 
-                            target="_blank" rel="noreferrer noopener" className='hover:-translate-y-1 transition-all duration-75 ease-in'>
+                            target="_blank" rel="noreferrer noopener" className='motion-reduce:hover:-translate-y-1 motion-reduce:duration-75 ease-in'>
                                 <AiFillLinkedin />
                             </a>
                             <a href="mailto:wietse.vandeput@hotmail.com"

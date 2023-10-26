@@ -5,7 +5,7 @@ export default function Project(props: {title: string, photo: any, description: 
     return (
         <div id="projectCard" className="w-full min-h-[316px] h-[90%] my-auto px-2 md:px-4 py-2 relative text-primary__gray">
             <div id="cardBackground" className="bg-primary__gray bg-opacity-30 absolute inset-2 h-full z-0 border-0 border-primary__pink shadow-xl"/>
-            <div id="cardBackground" className="hidden bg-lines animate-scroll absolute inset-2 h-full z-0"/>
+            <div id="cardBackground" className="hidden bg-lines motion-reduce:animate-scroll absolute inset-2 h-full z-0"/>
             <div className="font-sulphur h-full flex flex-col justify-center items-center p-4 z-10 gap-4">
                 <h1 className="text-3xl font-audiowide pb-4 z-10">{props.title}</h1>
                 <a href={props.link}
